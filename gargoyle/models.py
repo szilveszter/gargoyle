@@ -256,10 +256,8 @@ class SwitchManager(ModelDict):
 
     INCLUDE   = INCLUDE
     EXCLUDE   = EXCLUDE
-    
-    def __init__(self, *args, **kwargs):
-        self._registry = {}
-        super(SwitchManager, self).__init__(*args, **kwargs)
+
+    _registry = {}
     
     def __repr__(self):
         return "<%s: %s (%s)>" % (self.__class__.__name__, self.model, self._registry.values())
